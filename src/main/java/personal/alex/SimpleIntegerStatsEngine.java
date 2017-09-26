@@ -1,10 +1,15 @@
 package personal.alex;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     private List<int[]> inputIntegers;
     private List<String> calculatedIntegerStats;
+
+    public SimpleIntegerStatsEngine() {
+        this.calculatedIntegerStats = new LinkedList<String>();
+    }
 
     public void setIntegerData(List<int[]> inputIntegerData) {
         inputIntegers = inputIntegerData;
@@ -15,10 +20,15 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     }
 
     public void calculateIntegerStats() {
-        calculateTotalNumberOfIntegers(inputIntegers);
-        calculateHighestNumberOfIntegersInOneLine(inputIntegers);
-        calculateHighestNumberOfIntegersInOneLine(inputIntegers);
-        calculateModeOfAllIntegers(inputIntegers);
+        if(inputIntegers.size() == 0) {
+            calculatedIntegerStats.add("No integers to work with == no stats");
+        }
+        else {
+            calculateTotalNumberOfIntegers(inputIntegers);
+            calculateHighestNumberOfIntegersInOneLine(inputIntegers);
+            calculateHighestNumberOfIntegersInOneLine(inputIntegers);
+            calculateModeOfAllIntegers(inputIntegers);
+        }
     }
 
     //Todo: Total number of integers
