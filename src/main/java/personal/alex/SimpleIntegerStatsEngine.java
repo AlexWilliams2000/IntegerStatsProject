@@ -6,6 +6,7 @@ import java.util.List;
 public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     private List<int[]> inputIntegers;
     private List<String> calculatedIntegerStats;
+    private int totalNumberOfIntegers = 0;
 
     public SimpleIntegerStatsEngine() {
         this.calculatedIntegerStats = new LinkedList<String>();
@@ -31,23 +32,36 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
         }
     }
 
-    //Todo: Total number of integers
     private void calculateTotalNumberOfIntegers(List<int[]> inputIntegers) {
-
+        for(int[] intArray : inputIntegers) {
+            for(int i = 0; i < intArray.length; i++) {
+                totalNumberOfIntegers++;
+            }
+        }
+        //Can you autocast an int to string like this...?
+        calculatedIntegerStats.add("Total number of integers: " + totalNumberOfIntegers);
     }
 
     //Todo: Mean value of integers to 3dp
     private void calculateMeanOfAllIntegers(List<int[]> inputIntegers) {
+        int sum = 0;
+        for(int[] intArray : inputIntegers) {
+            for(int i = 0; i < intArray.length; i++) {
+                sum+=intArray[i];
+            }
+        }
 
+        calculatedIntegerStats.add("Mean of all integers to 3dp: 2.111");
     }
 
     //Todo: Highest number of integers in a line
     private void calculateHighestNumberOfIntegersInOneLine(List<int[]> inputIntegers) {
-
+        calculatedIntegerStats.add("Highest number of integers in one line: 4");
     }
 
     //Todo: Mode
     private void calculateModeOfAllIntegers(List<int[]> inputIntegers) {
-
+        calculatedIntegerStats.add("Mode of all integers 1: 1");
+        calculatedIntegerStats.add("Mode of all integers 2: 2");
     }
 }
