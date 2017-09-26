@@ -61,7 +61,11 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
 
     //Todo: Highest number of integers in a line
     private void calculateHighestNumberOfIntegersInOneLine(List<int[]> inputIntegers) {
-        calculatedIntegerStats.add("Highest number of integers in one line: 4");
+        int highest = 0;
+        for(int[] intArray : inputIntegers) {
+            if(intArray.length > highest) highest = intArray.length;
+        }
+        calculatedIntegerStats.add("Highest number of integers in one line: " + highest);
     }
 
     //Todo: Mode
