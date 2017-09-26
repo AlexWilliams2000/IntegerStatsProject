@@ -1,5 +1,7 @@
 package personal.alex;
 
+import java.util.List;
+
 /**
  * Integer statistics main class
  *  Alex W. 09/2017
@@ -9,6 +11,8 @@ public class IntegerStatsControl
 {
     private String inputFileName;
     private IntegerParser integerParser;
+    private IntegerStatsEngine integerStatsEngine;
+    private List<int[]> parsedIntegers;
 
     public IntegerStatsControl(String inputFileName) {
         this.inputFileName = inputFileName;
@@ -31,9 +35,11 @@ public class IntegerStatsControl
     private void run() {
         setup();
         integerParser.parseIntegersFromCSVFile(inputFileName);
+        parsedIntegers = integerParser.getParsedIntegers();
     }
 
     private void setup() {
         integerParser = new IntegerParser();
+        integerStatsEngine = IntegerStatsEngineFactory.getIntegerStatsEngine("simpleIntegerStatsEngine");
     }
 }
