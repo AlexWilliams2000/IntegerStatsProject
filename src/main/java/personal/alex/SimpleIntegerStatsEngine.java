@@ -1,5 +1,6 @@
 package personal.alex;
 
+import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -51,7 +52,11 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
             }
         }
 
-        calculatedIntegerStats.add("Mean of all integers to 3dp: 2.111");
+        BigDecimal sumBD = new BigDecimal(sum);
+        BigDecimal countBD = new BigDecimal(totalNumberOfIntegers);
+        BigDecimal mean = sumBD.divide(countBD,3, BigDecimal.ROUND_HALF_EVEN);
+
+        calculatedIntegerStats.add("Mean of all integers to 3dp: " + mean.toString());
     }
 
     //Todo: Highest number of integers in a line
