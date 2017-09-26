@@ -7,6 +7,13 @@ package personal.alex;
 
 public class IntegerStatsControl
 {
+    private String inputFileName;
+    private IntegerParser integerParser;
+
+    public IntegerStatsControl(String inputFileName) {
+        this.inputFileName = inputFileName;
+    }
+
     public static void main(String[] args) {
         if (args.length == 0) {
             String errorNoFileNameArgument = "Error: No file was specified\n\n"
@@ -16,7 +23,17 @@ public class IntegerStatsControl
             System.exit(1);
         }
         else {
-            System.out.println(args[0]);
+            IntegerStatsControl integerStatsControl = new IntegerStatsControl(args[0]);
+            integerStatsControl.run();
         }
+    }
+
+    private void run() {
+        setup();
+        integerParser.parseIntegersFromCSVFile(inputFileName);
+    }
+
+    private void setup() {
+        integerParser = new IntegerParser();
     }
 }
