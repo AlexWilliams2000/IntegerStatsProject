@@ -13,6 +13,7 @@ public class IntegerStatsControl
     private IntegerParser integerParser;
     private IntegerStatsEngine integerStatsEngine;
     private List<int[]> parsedIntegers;
+    private List<String> calculatedStats;
 
     public IntegerStatsControl(String inputFileName) {
         this.inputFileName = inputFileName;
@@ -36,6 +37,9 @@ public class IntegerStatsControl
         setup();
         integerParser.parseIntegersFromCSVFile(inputFileName);
         parsedIntegers = integerParser.getParsedIntegers();
+        integerStatsEngine.setIntegerData(parsedIntegers);
+        integerStatsEngine.calculateIntegerStats();
+        calculatedStats = integerStatsEngine.getCalculatedIntegerStats();
     }
 
     private void setup() {
