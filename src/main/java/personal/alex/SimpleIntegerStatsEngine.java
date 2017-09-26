@@ -6,11 +6,6 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     private List<int[]> inputIntegers;
     private List<String> calculatedIntegerStats;
 
-    //Todo: Total number of integers
-    //Todo: Mean value of integers to 3dp
-    //Todo: Highest number of integers in a line
-    //Todo: Mode
-
     public void setIntegerData(List<int[]> inputIntegerData) {
         inputIntegers = inputIntegerData;
     }
@@ -20,6 +15,31 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     }
 
     public void calculateIntegerStats() {
+        calculateTotalNumberOfIntegers(inputIntegers);
+        calculateHighestNumberOfIntegersInOneLine(inputIntegers);
+        calculateHighestNumberOfIntegersInOneLine(inputIntegers);
+        calculateModeOfAllIntegers(inputIntegers);
+    }
+
+    //Todo: Total number of integers
+    private void calculateTotalNumberOfIntegers(List<int[]> inputIntegers) {
 
     }
+
+    //Todo: Mean value of integers to 3dp
+    private void calculateMeanofAllIntegers(List<int[]> inputIntegers) {
+
+    }
+
+    //Todo: Highest number of integers in a line
+    private void calculateHighestNumberOfIntegersInOneLine(List<int[]> inputIntegers) {
+
+    }
+
+    //Todo: Mode
+    private void calculateModeOfAllIntegers(List<int[]> inputIntegers) {
+
+    }
+
+
 }
