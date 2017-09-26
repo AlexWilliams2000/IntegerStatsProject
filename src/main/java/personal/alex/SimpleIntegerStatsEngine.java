@@ -11,7 +11,15 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     //Todo: Highest number of integers in a line
     //Todo: Mode
 
-    public void setIntegerData() {};
-    public void getIntegerData() {};
-    public void calculateIntegerStats() {};
+    public void setIntegerData(List<int[]> inputIntegerData) {
+        inputIntegers = inputIntegerData;
+    }
+
+    public List<String> getCalculatedIntegerStats() {
+        return calculatedIntegerStats;
+    }
+
+    public void calculateIntegerStats() {
+
+    }
 }
