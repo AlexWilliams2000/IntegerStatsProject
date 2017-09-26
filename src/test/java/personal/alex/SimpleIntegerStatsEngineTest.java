@@ -10,7 +10,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class SimpleIntegerStatsEngineTest {
-
     private SimpleIntegerStatsEngine statsEngine;
 
     @Before
@@ -18,14 +17,28 @@ public class SimpleIntegerStatsEngineTest {
         statsEngine = new SimpleIntegerStatsEngine();
     }
 
-    /*
-    public void calculateIntegerStats() {
-        calculateTotalNumberOfIntegers(inputIntegers);
-        calculateHighestNumberOfIntegersInOneLine(inputIntegers);
-        calculateHighestNumberOfIntegersInOneLine(inputIntegers);
-        calculateModeOfAllIntegers(inputIntegers);
+    @Test
+    public void testStatsCalculationWhereThereAreIntegers() {
+        List<String> results;
+        List<int[]> dataSet = new ArrayList<int[]>();
+        int[] line1 = new int[]{1,2};
+        int[] line2 = new int[]{1,2,3};
+        int[] line3 = new int[]{1,2,3,4};
+        dataSet.add(line1);
+        dataSet.add(line2);
+        dataSet.add(line3);
+
+        statsEngine.setIntegerData(dataSet);
+        statsEngine.calculateIntegerStats();
+        results = statsEngine.getCalculatedIntegerStats();
+
+        assertEquals(5, results.size());
+        assertEquals("Total number of integers: 9", results.get(0));
+        assertEquals("Mean of all integers to 3dp: 2.111", results.get(1));
+        assertEquals("Highest number of integers in one line: 4", results.get(2));
+        assertEquals("Mode of all integers 1: 1", results.get(3));
+        assertEquals("Mode of all integers 2: 2", results.get(4));
     }
-    */
 
     @Test
     public void testStatsCalculationWhereThereAreNoIntegers() {

@@ -25,7 +25,7 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
         }
         else {
             calculateTotalNumberOfIntegers(inputIntegers);
-            calculateHighestNumberOfIntegersInOneLine(inputIntegers);
+            calculateMeanOfAllIntegers(inputIntegers);
             calculateHighestNumberOfIntegersInOneLine(inputIntegers);
             calculateModeOfAllIntegers(inputIntegers);
         }
@@ -37,7 +37,7 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     }
 
     //Todo: Mean value of integers to 3dp
-    private void calculateMeanofAllIntegers(List<int[]> inputIntegers) {
+    private void calculateMeanOfAllIntegers(List<int[]> inputIntegers) {
 
     }
 
@@ -50,6 +50,4 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
     private void calculateModeOfAllIntegers(List<int[]> inputIntegers) {
 
     }
-
-
 }
