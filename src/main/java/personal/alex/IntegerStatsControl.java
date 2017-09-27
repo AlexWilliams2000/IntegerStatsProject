@@ -47,7 +47,7 @@ public class IntegerStatsControl
 
     private void setup() {
         integerParser = new IntegerParser();
-        integerStatsEngine = IntegerStatsEngineFactory.getIntegerStatsEngine("simpleIntegerStatsEngine");
-        display = DisplayFactory.getDisplay("simpleDisplay");
+        integerStatsEngine = IntegerStatsEngineFactory.getIntegerStatsEngine("SimpleIntegerStatsEngine");
+        display = DisplayFactory.getDisplay("SimpleDisplay");
     }
 }
