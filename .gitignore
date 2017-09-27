@@ -62,7 +62,6 @@ Temporary Items
 .idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml
 .idea/libraries/Maven__org_apache_commons_commons_text_1_1.xml
 .idea/uiDesigner.xml
-.idea/workspace.xml
 target/IntegerStatisticsProject-1.0-SNAPSHOT.jar
 target/classes/
 target/maven-status/
