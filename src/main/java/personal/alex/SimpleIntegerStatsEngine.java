@@ -64,7 +64,7 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
         }
         calculatedIntegerStats.add("Highest number of integers in one line: " + highest);
     }
-    
+
     private void calculateModeOfAllIntegers(List<int[]> inputIntegers) {
         LinkedHashMap<Integer, Integer> countOfUniqueIntegers = new LinkedHashMap<Integer, Integer>();
         int highestCount = 0;
