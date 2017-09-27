@@ -1,5 +1,9 @@
 # IntegerStatsProject
-A simple integer statistics calculator taking csv files as input
+A simple integer statistics calculator taking csv files as input.
+
+Foolishly I initially included some of the target files, so there are some binaries in the Git history.
+
+The testing isn't complete and I would like to increase coverage.
 
 Development environment:
 
@@ -10,8 +14,20 @@ Development environment:
   Build tool: Maven 3.5.0
   
   Testing: junit 4.12
+
+I haven't tested this from a Windows command line yet, or in a Linux environment. However the following should work. I'll verify these steps when I get a chance later.
+
+Installation - clone repository, then from source root folder run:
+	mvn clean install
+
+Usage - from the source root folder, run:
+	mvn exec:exec -Dexec.args="{path to csv file}"
+e.g:
+	mvn exec:exec -Dexec.args="C:\dev\projects\IntegerStatsProject\src\test\resources\SampleCSVvalidWithIntegers.csv"
   
-These need refinement...
+Failing that it should compile and run from within an IDE with a Maven installation. 
+
+I've included an attempt at some user stories. They need refinement...
 
 Epic:
 
@@ -79,7 +95,7 @@ Stories:
 	Data presentation:
 	
 		As the owner of a data structure containing statistics
-		I want to display the statistics
+		I want to display the statistics on the command line
 		So that a data scientist can interpret the results
 		
 			Happy: Valid data structure containing statistics and labels
