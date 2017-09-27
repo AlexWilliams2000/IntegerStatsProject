@@ -1,4 +1,4 @@
 package personal.alex;
 
-public class Display {
+public interface Display {
 }
