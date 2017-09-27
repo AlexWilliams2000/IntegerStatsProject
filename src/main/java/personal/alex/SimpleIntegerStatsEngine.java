@@ -54,7 +54,7 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
         BigDecimal countBD = new BigDecimal(totalNumberOfIntegers);
         BigDecimal mean = sumBD.divide(countBD,3, BigDecimal.ROUND_HALF_EVEN);
 
-        calculatedIntegerStats.add("Mean of all integers to 3dp: " + mean.toString());
+        calculatedIntegerStats.add("Mean to 3dp: " + mean.toString());
     }
 
     private void calculateHighestNumberOfIntegersInOneLine(List<int[]> inputIntegers) {
@@ -87,7 +87,7 @@ public class SimpleIntegerStatsEngine implements IntegerStatsEngine {
             Integer key = entry.getKey();
             Integer value = entry.getValue();
             if(value == highestCount) {
-                calculatedIntegerStats.add("Mode of all integers " + ++modeCount + ": " + key);
+                calculatedIntegerStats.add("Mode " + ++modeCount + ": " + key);
             }
         }
     }

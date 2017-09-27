@@ -4,7 +4,7 @@ import java.util.List;
 
 public class SimpleDisplay implements Display {
 
-    static final String header = "Calculated Integer Stats:\n\n";
+    static final String header = "Calculated Integer Stats:\n";
 
     public SimpleDisplay() {
 

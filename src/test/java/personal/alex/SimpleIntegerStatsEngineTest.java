@@ -34,10 +34,10 @@ public class SimpleIntegerStatsEngineTest {
 
         assertEquals(5, results.size());
         assertEquals("Total number of integers: 9", results.get(0));
-        assertEquals("Mean of all integers to 3dp: 2.111", results.get(1));
+        assertEquals("Mean to 3dp: 2.111", results.get(1));
         assertEquals("Highest number of integers in one line: 4", results.get(2));
-        assertEquals("Mode of all integers 1: 1", results.get(3));
-        assertEquals("Mode of all integers 2: 2", results.get(4));
+        assertEquals("Mode 1: 1", results.get(3));
+        assertEquals("Mode 2: 2", results.get(4));
     }
 
     @Test
