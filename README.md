@@ -76,15 +76,15 @@ Stories:
 		And count the integers
 		So that I can calculate the mean of the integers to 3dp
 		
-		Scenario: Calculate mean of all integers
+		Scenario: Calculate largest number of integers on one line
 		As the owner of a data structure containing integers in a multi-line format
 		I want go through the lines one by one
 		So that I can find the number of integers on the line with the highest number of integers
 		
-		Scenario: Calculate mean of all integers
+		Scenario: Calculate the mode, or modes of all integers
 		As the owner of a data structure containing integers in a multi-line format
 		I want go through the lines one by one
-		So that I can find the mode of all the integers
+		So that I can find the mode, or modes of all the integers
 		
 			Happy: One line data structure
 			
