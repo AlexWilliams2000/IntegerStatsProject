@@ -1,5 +1,6 @@
 package personal.alex;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -12,6 +13,7 @@ public class IntegerStatsControl
     private String inputFileName;
     private IntegerParser integerParser;
     private IntegerStatsEngine integerStatsEngine;
+    private Display display;
     private List<int[]> parsedIntegers;
     private List<String> calculatedStats;
 
@@ -40,10 +42,12 @@ public class IntegerStatsControl
         integerStatsEngine.setIntegerData(parsedIntegers);
         integerStatsEngine.calculateIntegerStats();
         calculatedStats = integerStatsEngine.getCalculatedIntegerStats();
+        display.display(calculatedStats);
     }
 
     private void setup() {
         integerParser = new IntegerParser();
         integerStatsEngine = IntegerStatsEngineFactory.getIntegerStatsEngine("simpleIntegerStatsEngine");
+        display = DisplayFactory.getDisplay("simpleDisplay");
     }
 }
